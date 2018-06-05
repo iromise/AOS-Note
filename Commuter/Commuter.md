@@ -30,6 +30,8 @@
 - 探索了 POSIX 的可扩展性，对 18 个简化的 POSIX 文件系统以及虚拟内存系统调用进行了建模，生成了13664 个测试样例对，指出每一个都可以根据规则改为无冲突的。
 
 * 指导了一个研究性系统 sv6 的设计。
+
+
 相关文献
 
 - Disjoint-access-parallel implementations of strong shared mem- ory primitives

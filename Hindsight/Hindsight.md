@@ -1,4 +1,4 @@
-# Note of Understanding the Evolution of UI Vulnerabilities in Mobile Browsers
+# Hindsight
 
 [TOC]
 

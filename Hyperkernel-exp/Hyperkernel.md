@@ -2,8 +2,6 @@
 
 [TOC]
 
-
-
 ## 概述
 
 这篇文章主要是设计，实现一个工具 `Hyperkernel` ，并形式化验证了一个 OS 内核的功能正确性，它的特点在于高度自动化与验证效率很高。在形式化验证的过程中，本文秉持了三个核心观点，即
@@ -70,7 +68,7 @@
 * 不正确，返回一个错误码，内核状态不改变
 
 ### Implementation
-在 Hyperkernel 内部，dup 并不是寻找一个可用的 fd，而是直接 check。而且对于C 代码几乎没有限制，可以使用goto 语句，fall-through switch 语句。但与此同时，仍然需要确保 Representation invariant，类似于循环不变量，可以使用两种方法检查
+在 Hyperkernel 内部，dup 并不是寻找一个可用的 fd，而是直接 check。而且对于 C 代码几乎没有限制，可以使用 goto 语句，fall-through switch 语句。但与此同时，仍然需要确保 Representation invariant，类似于循环不变量，可以使用两种方法检查
 * 动态检查，在进入函数处编写代码测试。
 * 静态检查，在验证阶段使用 check_rep_invariant 函数进行检查。
 

@@ -107,7 +107,7 @@
     * 由 App 指定的白名单中的 App。
 ## WindowGuard
 
-在具体的视线中，作者主要是使用了 xposed hook 了 26 个函数，其中包括AMS，WMS，PMS，System UI 相关管理的函数。具体的
+在具体的实现中，作者主要是使用了 xposed hook 了 26 个函数，其中包括AMS，WMS，PMS，System UI 相关管理的函数。具体的
 
 * Activity session integrity。作者通过 hook AMS 相关的函数，每当 focused activity 改变的时候就执行完整性检查。
 * Access control of free windows。作者通过 hook 了一系列的 WMS 函数，例如添加窗口，窗口栈排序，窗口可见性控制等函数，从而防止用户伪造，勒索软件拒绝服务攻击。
